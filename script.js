@@ -9,13 +9,20 @@ form_agenda.addEventListener('submit', (e) => {
 })
 
 function atualizarTable() {
-    const nome = document.querySelector("#nome").value;
-    const tel = document.querySelector("#tel").value;
+    const nome = document.querySelector("#nome");
+    const tel = document.querySelector("#tel");
     const lista_contatos = document.querySelector("#lista_contatos");
+    if (!linhas.includes(nome.value) && !linhas.includes(tel.value)) {
 
-    let linha = `<tr><td>${nome}</td><td>${tel}</td></tr>`
-    linhas += linha;
-    lista_contatos.innerHTML = linhas;
+        let linha = `<tr><td>${nome.value}</td><td>${tel.value}</td></tr>`
+        linhas += linha;
+        lista_contatos.innerHTML = linhas;
+        nome.value = "";
+        tel.value = "";
+    } else {
+        if (linhas.includes(nome.value)) alert(`O nome ${nome.value} já foi cadastrado!`)
+        else alert(`O número ${tel.value} já foi cadastrado!`)
+    }
 }
 
 function atualizarContador() {

@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda de contatos</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./imagens/agenda.png" type="image/x-icon">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <main>
         <div class="container">
             <h1>CONTATOS</h1>
             <form id="form_agenda">
                 <div class="form_inputs_boxs">
-                    <label >Nome:</label>
-                    <input id="nome" required type="text">
+                    <label>Nome:</label>
+                    <input id="nome" required type="text" placeholder="Digite o nome...">
                 </div>
                 <div class="form_inputs_boxs">
-                    <label >Telefone:</label>
-                    <input id="tel" required type="tel">
+                    <label>Telefone:</label>
+                    <input id="tel" required type="tel" placeholder="Digite o telefone...">
                 </div>
                 <button id="button_submit" type="submit">Cadastrar</button>
             </form>
             <table>
                 <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Telefone</th>
+                    <tr id="header_table">
+                        <th><img src="./imagens/perfil-de-usuario.png" alt="Icone User">Nome</th>
+                        <th><img src="./imagens/telefone.png" alt="Icone telefone">Telefone</th>
                     </tr>
                 </thead>
                 <tbody id="lista_contatos">
-                    
                 </tbody>
-                <tfoot>
-                    <tr>
-                        <th colspan="2">N° Contatos</th>
+                    <tfoot>
+                    <tr id="footer">
+                        <th>N° Contatos</th>
                         <td id="numContatos">0</td>
                     </tr>
                 </tfoot>
             </table>
         </div>
     </main>
-    
+
     <script src="script.js"> </script>
 </body>
+
 </html>
